@@ -14,4 +14,23 @@ public class NumberAccuracy
 		//return first number divide second number
 		return num1.divide(num2, scale, BigDecimal.ROUND_HALF_UP);
 	}
+	
+	BigDecimal operation(String input1, String input2, String opereator)
+	{
+		//first number
+		BigDecimal num1 = new BigDecimal(input1);
+		//second number
+		BigDecimal num2 = new BigDecimal(input2); 
+		switch (opereator)
+		{
+			case "+" : 
+				return num1.add(num2);
+			case "-" : 
+				return num1.subtract(num2);
+			case "*" : 
+				return num1.multiply(num2);
+			default :
+				return null;
+		}
+	}
 }
