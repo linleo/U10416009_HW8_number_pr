@@ -15,13 +15,13 @@ public class NumberAccuracy
 		return num1.divide(num2, scale, BigDecimal.ROUND_HALF_UP);
 	}
 	
-	BigDecimal operation(String input1, String input2, String opereator)
+	BigDecimal operation(String input1, String input2, String operator)
 	{
 		//first number
 		BigDecimal num1 = new BigDecimal(input1);
 		//second number
 		BigDecimal num2 = new BigDecimal(input2); 
-		switch (opereator)
+		switch (operator)
 		{
 			case "+" : 
 				return num1.add(num2);
